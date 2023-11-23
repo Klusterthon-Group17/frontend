@@ -21,8 +21,8 @@ const Navbar = () => {
               to={link.path}
               className={({ isActive }) => {
                 return isActive
-                  ? 'flex items-center gap-2 px-5 py-2 rounded-lg bg-Primary_main text-Text_main'
-                  : 'flex items-center gap-2 px-5 py-2 rounded-lg';
+                  ? 'flex items-center gap-2 px-5 py-2 rounded-lg bg-Primary_main text-Text_main hover:bg-Primary_light'
+                  : 'flex items-center gap-2 px-5 py-2 rounded-lg hover:bg-Primary_lighter hover:text-Text_main';
               }}
             >
               {link.icon} {link.name}

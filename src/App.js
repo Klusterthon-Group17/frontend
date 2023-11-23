@@ -2,11 +2,14 @@ import { useRoutes } from 'react-router-dom';
 import Navbar from './components/header/Navbar';
 import { Suspense, lazy } from 'react';
 import { RouteEnum } from './constant/RouteConstant';
+import Loading from './common/Loading';
+
+const HomePage = lazy(() => import('./pages/HomePage'));
 
 function App() {
   const routes = useRoutes(ROUTES);
   return (
-    <Suspense fallback={<p className='mt-[40%] md:mt-[25%]'>Loading...</p>}>
+    <Suspense fallback={<Loading />}>
       <Navbar />
       {routes}
     </Suspense>
@@ -15,6 +18,4 @@ function App() {
 
 export default App;
 
-const ROUTES = [
-  { path: RouteEnum.HOME, element: lazy(() => import('./pages/HomePage')) },
-];
+const ROUTES = [{ path: RouteEnum.HOME, element: <HomePage /> }];
