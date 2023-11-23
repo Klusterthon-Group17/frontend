@@ -9,6 +9,7 @@ module.exports = {
         Primary_lighter: '#B1DFE1',
         Primary_dark: '#026C70',
         Primary_darker: '#014042',
+        Text_main: '#FCFCFC',
       },
     },
   },
