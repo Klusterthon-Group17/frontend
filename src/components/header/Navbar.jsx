@@ -12,7 +12,7 @@ import { IconButton } from '@mui/material';
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
 
-  const user = false;
+  const user = true;
   return (
     <>
       <nav className='border-b bg-Text_main p-5'>

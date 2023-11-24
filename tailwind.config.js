@@ -10,6 +10,7 @@ module.exports = {
         Primary_dark: '#026C70',
         Primary_darker: '#014042',
         Text_main: '#FCFCFC',
+        Text_dark: '#B0B0B0',
         Red: '#FF4D4D',
         Dark: '#181818',
         Body: '#f5f5f5',

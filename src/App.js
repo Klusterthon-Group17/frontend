@@ -8,6 +8,7 @@ import { Container } from '@mui/material';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const SigninPage = lazy(() => import('./pages/SigninPage'));
 const SignupPage = lazy(() => import('./pages/SignupPage'));
+const SettingsPage = lazy(() => import('./pages/SettingsPage'));
 
 function App() {
   const routes = useRoutes(ROUTES);
@@ -26,4 +27,5 @@ const ROUTES = [
   { path: RouteEnum.HOME, element: <HomePage /> },
   { path: RouteEnum.SIGNIN, element: <SigninPage /> },
   { path: RouteEnum.SIGNUP, element: <SignupPage /> },
+  { path: RouteEnum.SETTINGS, element: <SettingsPage /> },
 ];
