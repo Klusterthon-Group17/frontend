@@ -1,17 +1,17 @@
-import { useRoutes } from 'react-router-dom';
-import Navbar from './components/header/Navbar';
-import { Suspense, lazy } from 'react';
-import { RouteEnum } from './constant/RouteConstant';
-import Loading from './common/Loading';
+import { useRoutes } from "react-router-dom";
+import Navbar from "./components/header/Navbar";
+import { Suspense, lazy } from "react";
+import { RouteEnum } from "./constant/RouteConstant";
+import Loading from "./common/Loading";
 
-const HomePage = lazy(() => import('./pages/HomePage'));
-const SigninPage = lazy(() => import('./pages/SigninPage'));
-const SignupPage = lazy(() => import('./pages/SignupPage'));
-const SettingsPage = lazy(() => import('./pages/SettingsPage'));
-const PricingPage = lazy(() => import('./pages/PricingPage'));
-const ProfilePage = lazy(() => import('./pages/ProfilePage'));
-const PasswordPage = lazy(() => import('./pages/PasswordPage'));
-
+const HomePage = lazy(() => import("./pages/HomePage"));
+const SigninPage = lazy(() => import("./pages/SigninPage"));
+const SignupPage = lazy(() => import("./pages/SignupPage"));
+const SettingsPage = lazy(() => import("./pages/SettingsPage"));
+const PricingPage = lazy(() => import("./pages/PricingPage"));
+const ProfilePage = lazy(() => import("./pages/ProfilePage"));
+const PasswordPage = lazy(() => import("./pages/PasswordPage"));
+const ChatPage = lazy(() => import("./pages/ChatPage"));
 function App() {
   const routes = useRoutes(ROUTES);
 
@@ -35,4 +35,5 @@ const ROUTES = [
   { path: RouteEnum.SETTINGS_PASSWORD, element: <PasswordPage /> },
   { path: RouteEnum.SETTINGS_PROFILE, element: <ProfilePage /> },
   { path: RouteEnum.SETTINGS_SUBSCRIPTION, element: <PricingPage /> },
+  { path: RouteEnum.CHAT, element: <ChatPage /> },
 ];
