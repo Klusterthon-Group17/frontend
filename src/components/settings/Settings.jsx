@@ -8,10 +8,11 @@ import { PiNotebookLight } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
 import { MdNavigateNext } from 'react-icons/md';
 import { RouteEnum } from '../../constant/RouteConstant';
+import { Container } from '@mui/material';
 
 const Settings = () => {
   return (
-    <section className='space-y-5'>
+    <Container className='w-full py-10 space-y-5'>
       <div className='space-y-3'>
         <h2 className=' font-extralight'>Account</h2>
 
@@ -97,7 +98,7 @@ const Settings = () => {
       </div>
 
       <h2 className='text-center text-Text_dark'>Version 1.0</h2>
-    </section>
+    </Container>
   );
 };
 

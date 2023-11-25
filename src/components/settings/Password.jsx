@@ -1,4 +1,5 @@
 import {
+  Container,
   FormControl,
   IconButton,
   InputAdornment,
@@ -17,7 +18,7 @@ const Password = () => {
     event.preventDefault();
   };
   return (
-    <section>
+    <Container className='w-full pt-20'>
       <div className='w-full mx-auto space-y-5 md:w-1/2'>
         <form className='space-y-5'>
           <FormControl fullWidth>
@@ -79,7 +80,7 @@ const Password = () => {
           <Button>Save Changes</Button>
         </form>
       </div>
-    </section>
+    </Container>
   );
 };
 

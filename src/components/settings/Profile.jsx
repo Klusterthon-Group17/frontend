@@ -1,11 +1,11 @@
 import React from 'react';
 import avatar from '../../assets/svgs/avatar.svg';
-import { FormControl, TextField } from '@mui/material';
+import { Container, FormControl, TextField } from '@mui/material';
 import Button from '../../common/Button';
 
 const Profile = () => {
   return (
-    <section>
+    <Container className='w-full py-10'>
       <div className='w-full mx-auto space-y-5 md:w-1/2'>
         <div className=' space-y-3'>
           <img src={avatar} alt='avatar' className='mx-auto' />
@@ -38,7 +38,7 @@ const Profile = () => {
           <Button>Save Changes</Button>
         </form>
       </div>
-    </section>
+    </Container>
   );
 };
 
