@@ -1,29 +1,26 @@
-import { useLocation, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import Navbar from "./components/header/Navbar";
-import { Suspense, lazy, useEffect } from "react";
+import { Suspense, lazy } from "react";
 import { RouteEnum } from "./constant/RouteConstant";
 import Loading from "./common/Loading";
-import { Box, Container } from "@mui/material";
-import ChatPage from "./pages/ChatPage";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const SigninPage = lazy(() => import("./pages/SigninPage"));
 const SignupPage = lazy(() => import("./pages/SignupPage"));
 const SettingsPage = lazy(() => import("./pages/SettingsPage"));
-
+const PricingPage = lazy(() => import("./pages/PricingPage"));
+const ProfilePage = lazy(() => import("./pages/ProfilePage"));
+const PasswordPage = lazy(() => import("./pages/PasswordPage"));
+const ChatPage = lazy(() => import("./pages/ChatPage"));
 function App() {
   const routes = useRoutes(ROUTES);
-  const { pathname } = useLocation();
+
+  const user = false;
 
   return (
     <Suspense fallback={<Loading />}>
-      <Box style={{ overflow: "hidden" }}>
-        <Navbar />
-        {/* disable scroll for chat page by removing the margin */}
-        <Container className={pathname === "/chat" ? "" : "my-10"}>
-          {routes}
-        </Container>
-      </Box>
+      {user && <Navbar />}
+      {routes}
     </Suspense>
   );
 }
@@ -35,6 +32,8 @@ const ROUTES = [
   { path: RouteEnum.SIGNIN, element: <SigninPage /> },
   { path: RouteEnum.SIGNUP, element: <SignupPage /> },
   { path: RouteEnum.SETTINGS, element: <SettingsPage /> },
-  { path: RouteEnum.SETTINGS, element: <SettingsPage /> },
+  { path: RouteEnum.SETTINGS_PASSWORD, element: <PasswordPage /> },
+  { path: RouteEnum.SETTINGS_PROFILE, element: <ProfilePage /> },
+  { path: RouteEnum.SETTINGS_SUBSCRIPTION, element: <PricingPage /> },
   { path: RouteEnum.CHAT, element: <ChatPage /> },
 ];

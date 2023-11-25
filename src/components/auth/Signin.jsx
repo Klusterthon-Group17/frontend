@@ -28,14 +28,20 @@ const Signin = () => {
   };
   return (
     <div className="grid grid-cols-1 gap-10 items-center md:grid-cols-2">
-      <div className="flex flex-col items-center py-28 bg-Dark md:py-48">
-        <img src={logo} alt="logo" className="mx-auto" />
+      <div className="bg-Dark flex flex-col items-center">
+        <div className="py-[46%]">
+          <img src={logo} alt="logo" className="mx-auto" />
+        </div>
       </div>
 
-      <div className="space-y-5 bg-Body p-5 md:mr-20 rounded-t-3xl -mt-14 md:py-0 md:rounded-t-none md:-mt-0">
-        <div className="space-y-3">
-          <h1 className=" text-lg font-bold">Welcome Back!</h1>
-          <h4>Sign into your to continue</h4>
+      <div className="space-y-5 text-center bg-Body px-5 py-10 rounded-t-3xl mr-0 -mt-14 md:space-y-10 md:mr-24 md:rounded-t-none md:-mt-0">
+        <div className="">
+          <img src={logo} alt="logo" className="mx-auto w-20" />
+        </div>
+
+        <div className=" space-y-3">
+          <h1 className=" text-2xl font-bold">Welcome Back!</h1>
+          <h4>Sign into your account to continue</h4>
         </div>
 
         <form className="space-y-3">
@@ -85,15 +91,17 @@ const Signin = () => {
           </div>
         </form>
 
-        <Button>
-          <Link to={RouteEnum.CHAT}>Login</Link>
-        </Button>
-        <h6 className="text-center">
-          Don’t have an account?{" "}
-          <span className=" text-Primary_main hover:cursor-pointer hover:underline">
-            <Link to={RouteEnum.SIGNUP}>Create account</Link>
-          </span>
-        </h6>
+        <div className="w-full mx-auto space-y-3 md:w-[90%]">
+          <Button>
+            <Link to={RouteEnum.CHAT}>Login</Link>
+          </Button>
+          <h6 className="text-center">
+            Don’t have an account?{" "}
+            <span className=" text-Primary_main hover:cursor-pointer hover:underline">
+              <Link to={RouteEnum.SIGNUP}>Create account</Link>
+            </span>
+          </h6>
+        </div>
       </div>
     </div>
   );

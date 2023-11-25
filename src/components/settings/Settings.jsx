@@ -7,6 +7,7 @@ import { PiNoteThin } from 'react-icons/pi';
 import { PiNotebookLight } from 'react-icons/pi';
 import { Link } from 'react-router-dom';
 import { MdNavigateNext } from 'react-icons/md';
+import { RouteEnum } from '../../constant/RouteConstant';
 
 const Settings = () => {
   return (
@@ -15,14 +16,20 @@ const Settings = () => {
         <h2 className=' font-extralight'>Account</h2>
 
         <div className='bg-Text_main p-5 rounded-lg'>
-          <Link className='flex gap-5 items-center py-5 px-3 hover:bg-Body'>
+          <Link
+            to={RouteEnum.SETTINGS_PROFILE}
+            className='flex gap-5 items-center py-5 px-3 hover:bg-Body'
+          >
             <div>
               <RiUserLine />
             </div>
             <h4>Profile information</h4>
           </Link>
 
-          <Link className='flex justify-between items-center py-5 px-3 hover:bg-Body'>
+          <Link
+            to={RouteEnum.SETTINGS_PASSWORD}
+            className='flex justify-between items-center py-5 px-3 hover:bg-Body'
+          >
             <div className='flex gap-5 items-center'>
               <div>
                 <SlLock />
@@ -34,7 +41,10 @@ const Settings = () => {
             </div>
           </Link>
 
-          <Link className='flex justify-between items-center py-5 px-3 hover:bg-Body'>
+          <Link
+            to={RouteEnum.SETTINGS_SUBSCRIPTION}
+            className='flex justify-between items-center py-5 px-3 hover:bg-Body'
+          >
             <div className='flex gap-5 items-center'>
               <div>
                 <VscDiffAdded />

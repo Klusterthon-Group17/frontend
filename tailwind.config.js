@@ -14,6 +14,7 @@ module.exports = {
         Red: '#FF4D4D',
         Dark: '#181818',
         Body: '#f5f5f5',
+        Body_light: '#A6A6A6',
       },
     },
   },
