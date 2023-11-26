@@ -1,25 +1,28 @@
-import { useRoutes } from "react-router-dom";
-import Navbar from "./components/nav/Navbar";
-import { Suspense, lazy, useEffect, useState } from "react";
-import { RouteEnum } from "./constant/RouteConstant";
-import Loading from "./common/Loading";
-import Sidebar from "./components/nav/Sidebar";
 
-const HomePage = lazy(() => import("./pages/HomePage"));
-const SigninPage = lazy(() => import("./pages/SigninPage"));
-const SignupPage = lazy(() => import("./pages/SignupPage"));
-const SettingsPage = lazy(() => import("./pages/SettingsPage"));
-const PricingPage = lazy(() => import("./pages/PricingPage"));
-const ProfilePage = lazy(() => import("./pages/ProfilePage"));
-const PasswordPage = lazy(() => import("./pages/PasswordPage"));
-const ChatPage = lazy(() => import("./pages/ChatPage"));
-const ChatHistoryPage = lazy(() => import("./pages/ChatHistoryPage"));
+import { useRoutes } from 'react-router-dom';
+import Navbar from './components/nav/Navbar';
+import { Suspense, lazy, useEffect, useState } from "react";
+import { RouteEnum } from './constant/RouteConstant';
+import Loading from './common/Loading';
+import Sidebar from './components/nav/Sidebar';
+
+const HomePage = lazy(() => import('./pages/HomePage'));
+const SigninPage = lazy(() => import('./pages/SigninPage'));
+const SignupPage = lazy(() => import('./pages/SignupPage'));
+const VerifyPage = lazy(() => import('./pages/VerifyPage'));
+const SettingsPage = lazy(() => import('./pages/SettingsPage'));
+const PricingPage = lazy(() => import('./pages/PricingPage'));
+const ProfilePage = lazy(() => import('./pages/ProfilePage'));
+const PasswordPage = lazy(() => import('./pages/PasswordPage'));
+const ChatPage = lazy(() => import('./pages/ChatPage'));
+const ChatHistoryPage = lazy(() => import('./pages/ChatHistoryPage'));
 
 function App() {
   const authRoutes = useRoutes(AUTH_ROUTES);
   const unAuthRoutes = useRoutes(UN_AUTH_ROUTES);
 
   const [authenticated, setAuthenticated] = useState(false);
+
 
   // determine where user are routed to
   useEffect(() => {
@@ -47,6 +50,7 @@ function App() {
 }
 
 export default App;
+
 
 const AUTH_ROUTES = [
   { path: RouteEnum.SETTINGS, element: <SettingsPage /> },

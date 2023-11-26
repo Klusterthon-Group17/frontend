@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import Button from "../../common/Button";
 import logo from "../../assets/svgs/logo green.svg";
@@ -39,8 +40,10 @@ const Signin = () => {
           <img src={logo} alt="logo" className="mx-auto w-20" />
         </div>
 
-        <div className=" space-y-3">
-          <h1 className=" text-2xl font-bold">Welcome Back!</h1>
+
+        <div className=' space-y-3'>
+          <h1 className=' text-4xl font-bold'>Welcome Back!</h1>
+
           <h4>Sign into your account to continue</h4>
         </div>
 
@@ -90,6 +93,7 @@ const Signin = () => {
             </div>
           </div>
         </form>
+
 
         <div className="w-full mx-auto space-y-3 md:w-[90%]">
           <Button

@@ -34,7 +34,7 @@ const Signup = () => {
         </div>
 
         <div className=' space-y-3'>
-          <h1 className=' text-2xl font-bold'>Create Account </h1>
+          <h1 className=' text-4xl font-bold'>Create Account </h1>
           <h4>Sign up and join millions of healthy users</h4>
         </div>
 
@@ -101,9 +101,9 @@ const Signup = () => {
         </form>
 
         <div className='w-full mx-auto space-y-3 md:w-[90%]'>
-          <Button>
-            <Link to={RouteEnum.SIGNUP}>Create Account</Link>
-          </Button>
+          <Link to={RouteEnum.SIGNIN}>
+            <Button>Create Account</Button>
+          </Link>
           <h6 className='text-center'>
             Already have an account?{' '}
             <span className=' text-Primary_main hover:cursor-pointer hover:underline'>
