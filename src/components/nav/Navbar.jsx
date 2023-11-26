@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='block border-b bg-Text_main p-5 md:hidden'>
+      <nav className='fixed top-0 z-10 w-full border-b bg-Text_main p-5 md:hidden'>
         <div className='flex justify-between items-center px-5 md:px-10'>
           <IconButton onClick={() => setToggleNav(!toggleNav)}>
             <img src={hamburger} alt='hamburger' />

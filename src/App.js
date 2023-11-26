@@ -1,7 +1,6 @@
-
 import { useRoutes } from 'react-router-dom';
 import Navbar from './components/nav/Navbar';
-import { Suspense, lazy, useEffect, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from 'react';
 import { RouteEnum } from './constant/RouteConstant';
 import Loading from './common/Loading';
 import Sidebar from './components/nav/Sidebar';
@@ -23,10 +22,9 @@ function App() {
 
   const [authenticated, setAuthenticated] = useState(false);
 
-
   // determine where user are routed to
   useEffect(() => {
-    const isAuth = localStorage.getItem("health.ai");
+    const isAuth = localStorage.getItem('health.ai');
     if (isAuth) {
       setAuthenticated(true);
       return;
@@ -37,7 +35,7 @@ function App() {
   return (
     <>
       {authenticated && <Navbar />}
-      <div style={{ height: "100vh" }} className="flex">
+      <div style={{ height: '100vh' }} className='flex'>
         {authenticated && <Sidebar />}
         {authenticated ? (
           <Suspense fallback={<Loading />}>{authRoutes}</Suspense>
@@ -51,7 +49,6 @@ function App() {
 
 export default App;
 
-
 const AUTH_ROUTES = [
   { path: RouteEnum.SETTINGS, element: <SettingsPage /> },
   { path: RouteEnum.SETTINGS_PASSWORD, element: <PasswordPage /> },
@@ -59,12 +56,13 @@ const AUTH_ROUTES = [
   { path: RouteEnum.SETTINGS_SUBSCRIPTION, element: <PricingPage /> },
   { path: RouteEnum.CHAT, element: <ChatPage /> },
   { path: RouteEnum.HISTORY, element: <ChatHistoryPage /> },
-  { path: "/*", element: <ChatPage /> },
+  { path: '/*', element: <ChatPage /> },
 ];
 
 const UN_AUTH_ROUTES = [
   { path: RouteEnum.HOME, element: <HomePage /> },
   { path: RouteEnum.SIGNIN, element: <SigninPage /> },
   { path: RouteEnum.SIGNUP, element: <SignupPage /> },
-  { path: "/*", element: <HomePage /> },
+  { path: RouteEnum.VERIFY, element: <VerifyPage /> },
+  { path: '/*', element: <HomePage /> },
 ];

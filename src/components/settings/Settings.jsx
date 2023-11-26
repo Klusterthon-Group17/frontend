@@ -12,7 +12,7 @@ import { Container } from '@mui/material';
 
 const Settings = () => {
   return (
-    <Container className='w-full py-10 space-y-5'>
+    <Container className='w-full mt-32 mb-20 space-y-5 md:mt-10'>
       <div className='space-y-3'>
         <h2 className=' font-extralight'>Account</h2>
 

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from '../../common/Button';
 import logo from '../../assets/svgs/logo green.svg';
 import { Link } from 'react-router-dom';
 import { RouteEnum } from '../../constant/RouteConstant';
-import { FormControl, TextField } from '@mui/material';
+import { TextField } from '@mui/material';
 
 const Verify = () => {
   return (
@@ -39,9 +39,15 @@ const Verify = () => {
               <Link to={RouteEnum.SIGNIN}>Resend</Link>
             </span>
           </h6>
-          <Link to={RouteEnum.CHAT}>
-            <Button>Verify</Button>
-          </Link>
+
+          <Button
+            onClick={() => {
+              localStorage.setItem('health.ai', true);
+              window.location.href = RouteEnum.CHAT;
+            }}
+          >
+            Verify
+          </Button>
         </div>
       </div>
     </div>
