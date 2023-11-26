@@ -19,7 +19,7 @@ const ChatHistoryPage = lazy(() => import('./pages/ChatHistoryPage'));
 function App() {
   const routes = useRoutes(ROUTES);
 
-  const user = true;
+  const user = false;
 
   return (
     <>
