@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../../common/Button';
 import logo from '../../assets/svgs/logo green.svg';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { RouteEnum } from '../../constant/RouteConstant';
 import {
   Checkbox,
@@ -40,7 +40,7 @@ const Signin = () => {
         </div>
 
         <div className=' space-y-3'>
-          <h1 className=' text-2xl font-bold'>Welcome Back!</h1>
+          <h1 className=' text-4xl font-bold'>Welcome Back!</h1>
           <h4>Sign into your account to continue</h4>
         </div>
 
@@ -92,9 +92,9 @@ const Signin = () => {
         </form>
 
         <div className='w-full mx-auto space-y-3 md:w-[90%]'>
-          <Button>
-            <Link to={RouteEnum.CHAT}>Login</Link>
-          </Button>
+          <Link to={RouteEnum.VERIFY}>
+            <Button>Login</Button>
+          </Link>
           <h6 className='text-center'>
             Don’t have an account?{' '}
             <span className=' text-Primary_main hover:cursor-pointer hover:underline'>

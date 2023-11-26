@@ -8,6 +8,7 @@ import Sidebar from './components/nav/Sidebar';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const SigninPage = lazy(() => import('./pages/SigninPage'));
 const SignupPage = lazy(() => import('./pages/SignupPage'));
+const VerifyPage = lazy(() => import('./pages/VerifyPage'));
 const SettingsPage = lazy(() => import('./pages/SettingsPage'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
 const ProfilePage = lazy(() => import('./pages/ProfilePage'));
@@ -37,6 +38,7 @@ const ROUTES = [
   { path: RouteEnum.HOME, element: <HomePage /> },
   { path: RouteEnum.SIGNIN, element: <SigninPage /> },
   { path: RouteEnum.SIGNUP, element: <SignupPage /> },
+  { path: RouteEnum.VERIFY, element: <VerifyPage /> },
   { path: RouteEnum.SETTINGS, element: <SettingsPage /> },
   { path: RouteEnum.SETTINGS_PASSWORD, element: <PasswordPage /> },
   { path: RouteEnum.SETTINGS_PROFILE, element: <ProfilePage /> },
